@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cyberedit
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false        # Tu la saisiras manuellement dans le dashboard Render
+      - key: NODE_ENV
+        value: production
